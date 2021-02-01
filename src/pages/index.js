@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from '../components/Card'
 
 const productData = [
   {
@@ -21,13 +22,7 @@ export default function Home() {
   return (
     <div>
       {productData.map(prodobj => {
-        return (
-          <div key={prodobj.price_id}>
-            <p>Name : {prodobj.name}</p>  
-            <p>Price : ${prodobj.price}</p>  
-            <img src={prodobj.image} />
-          </div>
-        )
+        return <Card product={prodobj}></Card>
       })}
     </div>
   )
