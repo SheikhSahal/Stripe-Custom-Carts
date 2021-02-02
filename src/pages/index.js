@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from '../components/Card'
+import Header from '../components/Header.jsx'
 
 const productData = [
   {
@@ -21,8 +22,11 @@ const productData = [
 export default function Home() {
   return (
     <div>
+      <Header />  
       {productData.map(prodobj => {
-        return <Card product={prodobj}></Card>
+        return <Card 
+        key={prodobj.price_id}
+        product={prodobj}></Card>
       })}
     </div>
   )

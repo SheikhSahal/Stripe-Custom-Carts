@@ -4,7 +4,7 @@ import { CartProvider } from 'use-shopping-cart';
 
 const stripePromise = loadStripe("pk_test_51ICPbvIoW5V7ZqlfNTRdR1YAhQjycy4hOCyWI3rpiUbsmXB3p1qpFkNX4yhTE6C5t3UsLup2XSYNYBI1mrQAE9Td00GvRbVDNE")
 
-export const WrapElement =({ element }) => {
+export const wrapRootElement =({ element }) => {
     return (
         <CartProvider
             stripe={stripePromise}

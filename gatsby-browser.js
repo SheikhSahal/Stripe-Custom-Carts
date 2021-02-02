@@ -1,1 +1,1 @@
-export { WrapElement } from './src/provider/wrap-root-elemet'
+export { wrapRootElement } from './src/provider/wrap-root-elemet'
