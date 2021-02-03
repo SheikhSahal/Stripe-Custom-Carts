@@ -7,9 +7,10 @@ const stripePromise = loadStripe("pk_test_51ICPbvIoW5V7ZqlfNTRdR1YAhQjycy4hOCyWI
 export const wrapRootElement =({ element }) => {
     return (
         <CartProvider
+            mode = "client-only"
             stripe={stripePromise}
-            successUrl="stripe.com"
-            cancelUrl="twitter.com/dayhaysoos"
+            successUrl="http://localhost:8888/success"
+            cancelUrl="http://localhost:8888/error"
             currency="USD"
         >   
             {element}

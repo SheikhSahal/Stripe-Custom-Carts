@@ -3,7 +3,7 @@ import { useShoppingCart } from 'use-shopping-cart'
 import Header from '../components/Header.jsx'
 
 function Cart() {
-    const { cartDetails , incrementItem , decrementItem } = useShoppingCart()
+    const { cartDetails , incrementItem , decrementItem, redirectToCheckout } = useShoppingCart()
     const productlist = Object.entries(cartDetails);
     return (
         <div>
@@ -17,9 +17,8 @@ function Cart() {
                     <button onClick={() => decrementItem(product[0])}>-</button>
                 </div>
                 )}
-
-
             </div>
+            <button onClick={redirectToCheckout}>Check out</button>
         </div>
     )
 }
